@@ -29,9 +29,11 @@
   grid-area: ab;
   font-size: 0.7em;
 }
-.abilities2 {
-  grid-area: ab2;
-  font-size: 0.7em;
+.abilities:first-of-type {
+  grid-column: 1;
+}
+.abilities:last-of-type {
+  grid-column: 2;
 }
 .heart-svg {
   grid-area: heart;

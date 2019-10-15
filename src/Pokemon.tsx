@@ -3,11 +3,10 @@ import "./Pokemon.css";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { PokemonJSON } from "./PokemonJSON";
-import { likeFavorite } from "./FavoriteService";
-import Heart from "./Heart";
+import PokemonTemplate from "./PokemonTemplate";
 
 function Pokemon({ identifier }: { identifier: number | string }) {
-  const [pokemon, setPokemon] = useState<PokemonJSON>({} as PokemonJSON);
+  const [pokemon, setPokemon] = useState<PokemonJSON | any>("");
 
   useEffect(() => {
     async function getPokemon(identifier: number | string) {
@@ -25,45 +24,16 @@ function Pokemon({ identifier }: { identifier: number | string }) {
     getPokemon(identifier);
   }, [identifier]);
 
-  return (
+  const output = (
     <Link
       className="pokemon"
       to={{ pathname: `/detail/${pokemon.name}`, state: pokemon }}
     >
-      <img
-        alt={pokemon.name}
-        aria-label={pokemon.name}
-        src={(pokemon.sprites && pokemon.sprites.front_default) || ""}
-      />
-
-      <div className="pokemon-info">
-        <p className="id">
-          <span className="number-prefix">Nr. </span>
-          {pokemon.id}
-        </p>
-        <span
-          className="heart-svg"
-          onClick={e => likeFavorite(e, pokemon.name)}
-        >
-          <Heart
-            class={
-              (window.localStorage.getItem("favorites") || "").includes(
-                pokemon.name
-              ) && "heart"
-            }
-          />
-        </span>
-        <p className="name">{pokemon.name}</p>
-
-        <div className="abilities">
-          <span className="pill background-color-grass">Pflanze</span>
-        </div>
-        <div className="abilities2">
-          <span className="pill background-color-poison">Gift</span>
-        </div>
-      </div>
+      <PokemonTemplate pokemon={pokemon} />
     </Link>
   );
+
+  return <>{pokemon && output}</>;
 }
 
 export default Pokemon;

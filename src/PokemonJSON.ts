@@ -16,6 +16,10 @@ export interface PokemonJSON {
     front_default: string;
   };
   stats: Array<object>;
-  types: Array<object>;
+  types: Array<{
+    type: {
+      name: string;
+    };
+  }>;
   weight: number;
 }
