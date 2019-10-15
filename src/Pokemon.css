@@ -29,11 +29,11 @@
   grid-area: ab;
   font-size: 0.7em;
 }
-.abilities:first-of-type {
-  grid-column: 1;
-}
 .abilities:last-of-type {
   grid-column: 2;
+}
+.abilities:first-of-type {
+  grid-column: 1;
 }
 .heart-svg {
   grid-area: heart;
