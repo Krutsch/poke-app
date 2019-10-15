@@ -1,0 +1,42 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  text-align: center;
+  background-color: #282c34;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  min-height: 100vh;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(215px, max-content));
+  justify-content: center;
+  grid-gap: 2em;
+}
+
+.logo {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
+}
+
+.favorites {
+  display: block;
+  text-decoration: none;
+  text-align: left;
+  margin-bottom: 1em;
+  margin-left: 1em;
+  color: whitesmoke;
+  transition: transform 0.2s;
+  width: 200px; /*EDGE*/
+  width: max-content;
+}
+.favorites:hover {
+  transform: scale(1.1);
+}

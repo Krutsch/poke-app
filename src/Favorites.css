@@ -1,0 +1,7 @@
+.favorite {
+  display: grid;
+  margin-top: 1em;
+  grid-template-columns: repeat(auto-fit, minmax(215px, max-content));
+  justify-content: center;
+  grid-gap: 2em;
+}
