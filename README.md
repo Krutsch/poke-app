@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/624399eb-a99b-4f4f-8277-7d87eb9e0c06/deploy-status)](https://app.netlify.com/sites/poke-application/deploys)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
