@@ -11,12 +11,13 @@ function Favorites() {
     const favs = Array.from(favStorage.split(" ")).filter(fav => !!fav);
     setFavorites(favs);
   }, []);
+
   return (
     <div className="favorite">
       {!favorites.length && "You selected no Favorites yet!"}
 
-      {favorites.map((name, index) => (
-        <Pokemon key={index} identifier={name}></Pokemon>
+      {favorites.map(name => (
+        <Pokemon key={name} identifier={name}></Pokemon>
       ))}
     </div>
   );

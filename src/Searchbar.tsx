@@ -4,16 +4,10 @@ import { useEffect } from "react";
 import { withRouter } from "react-router-dom";
 
 function Searchbar(props: any) {
-  function upHandler(event: KeyboardEvent) {
-    if (event.keyCode === 13) {
-      event.preventDefault();
-      const url = event.srcElement as HTMLInputElement;
-      props.history.push(`/detail/${url.value.toString().trim()}`);
-    }
-  }
   useEffect(() => {
-    window.addEventListener("keyup", upHandler);
-    return () => window.removeEventListener("keyup", upHandler);
+    const elem = document.getElementById("search")!;
+    elem.addEventListener("keyup", downHandler);
+    return () => elem.removeEventListener("keyup", downHandler);
   });
 
   return (
@@ -26,6 +20,16 @@ function Searchbar(props: any) {
       />
     </label>
   );
+
+  function downHandler(event: KeyboardEvent) {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      const url = event.srcElement as HTMLInputElement;
+
+      if (url.value)
+        props.history.push(`/detail/${url.value.toString().trim()}`);
+    }
+  }
 }
 
 export default withRouter(Searchbar);

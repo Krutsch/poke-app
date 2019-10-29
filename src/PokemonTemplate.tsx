@@ -15,24 +15,24 @@ function PokemonTemplate({ pokemon }: { pokemon: PokemonJSON }) {
       <div className="pokemon-info">
         <p className="id">
           <span className="number-prefix">Nr. </span>
-          {pokemon.id}
+          {pokemon.id.toString().padStart(3, "0")}
         </p>
         <span
           className="heart-svg"
-          onClick={e => likeFavorite(e, pokemon.name)}
+          onClick={e => likeFavorite(e, "" + pokemon.id)}
         >
           <Heart
             class={
               (window.localStorage.getItem("favorites") || "").includes(
-                pokemon.name
+                pokemon.id.toString()
               ) && "heart"
             }
           />
         </span>
         <p className="name">{pokemon.name}</p>
 
-        {pokemon.types.map(item => (
-          <div className="abilities">
+        {pokemon.types.map((item, i) => (
+          <div key={i} className="abilities">
             <span className="pill background-color-grass">
               {item.type.name}
             </span>
@@ -43,4 +43,4 @@ function PokemonTemplate({ pokemon }: { pokemon: PokemonJSON }) {
   );
 }
 
-export default PokemonTemplate;
+export default React.memo(PokemonTemplate);

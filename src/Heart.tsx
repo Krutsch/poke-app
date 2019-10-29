@@ -2,7 +2,8 @@ import React from "react";
 const heartStyle = {
   fill: "rgba(255, 0, 0, 0.3)",
   width: "20px",
-  marginRight: "10px"
+  marginRight: "10px",
+  transition: "fill 0.1s ease"
 };
 const full = {
   fill: "red"

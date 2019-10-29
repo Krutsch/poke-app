@@ -1,15 +1,8 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
 .app {
   text-align: center;
-  background-color: #282c34;
   font-size: calc(10px + 2vmin);
   color: white;
-  min-height: 100vh;
+  padding-bottom: 1em;
 }
 
 .main {
@@ -26,6 +19,10 @@
   object-fit: contain;
 }
 
+.header {
+  margin-bottom: 1em;
+}
+
 .favorites {
   display: block;
   text-decoration: none;
@@ -37,6 +34,7 @@
   width: 200px; /*EDGE*/
   width: max-content;
 }
+
 .favorites:hover {
   transform: scale(1.1);
 }
