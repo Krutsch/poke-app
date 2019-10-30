@@ -12,12 +12,8 @@ function Searchbar(props: any) {
 
   return (
     <label>
-      <input
-        type="text"
-        name="search"
-        placeholder="Search for Pokédex number or name"
-        id="search"
-      />
+      <p>Search for Pokédex number or name</p>
+      <input type="text" name="search" placeholder="Pikachu" id="search" />
     </label>
   );
 

@@ -26,7 +26,7 @@ function Pokemon({ identifier }: { identifier: number | string }) {
 
   return (
     <>
-      {pokemon && (
+      {pokemon.id && (
         <Link
           className="pokemon"
           to={{ pathname: `/detail/${pokemon.name}`, state: pokemon }}

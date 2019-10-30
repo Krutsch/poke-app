@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import "./Favorites.css";
 
 function Favorites() {
-  const [favorites, setFavorites] = useState<Array<string>>([]);
+  const [favorites, setFavorites] = useState<Array<string> | null>(null);
 
   useEffect(() => {
     const favStorage = window.localStorage.getItem("favorites") || "";
@@ -14,11 +14,12 @@ function Favorites() {
 
   return (
     <div className="favorite">
-      {!favorites.length && "You selected no Favorites yet!"}
-
-      {favorites.map(name => (
-        <Pokemon key={name} identifier={name}></Pokemon>
-      ))}
+      {favorites !== null &&
+        (favorites.length
+          ? favorites.map(name => (
+              <Pokemon key={name} identifier={name}></Pokemon>
+            ))
+          : "You selected no Favorites yet!")}
     </div>
   );
 }

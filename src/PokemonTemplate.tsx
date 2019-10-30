@@ -10,6 +10,8 @@ function PokemonTemplate({ pokemon }: { pokemon: PokemonJSON }) {
         alt={pokemon.name}
         aria-label={pokemon.name}
         src={(pokemon.sprites && pokemon.sprites.front_default) || ""}
+        width="96"
+        height="96"
       />
 
       <div className="pokemon-info">
