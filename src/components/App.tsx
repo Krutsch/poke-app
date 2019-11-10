@@ -1,6 +1,6 @@
 import React, { lazy, Suspense } from "react";
 import "../styles/App.css";
-import Logo from "../logo.webp";
+import Logo from "../images/logo.webp";
 import Pokemon from "./Pokemon";
 import Searchbar from "./Searchbar";
 import Heart from "./Heart";
