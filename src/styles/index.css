@@ -1,0 +1,44 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+*:focus:not(:-moz-focusring) {
+  outline: none;
+}
+:-moz-focusring {
+  outline-offset: 2px;
+  outline: 2px solid Highlight;
+}
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+*:focus-visible {
+  outline-offset: 2px;
+  outline: 2px solid Highlight;
+}
+html,
+body {
+  height: 100%;
+  scrollbar-color: hsl(0, 0%, 25%) transparent;
+  scrollbar-width: thin;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #282c34;
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  background: transparent;
+  width: 0.7em;
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(0, 0%, 25%);
+}

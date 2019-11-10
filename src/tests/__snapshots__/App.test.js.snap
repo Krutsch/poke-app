@@ -1,0 +1,196 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<UNDEFINED>
+  <div
+    className="app"
+  >
+    <BrowserRouter>
+      <header
+        className="header"
+      >
+        <ForwardRef
+          to="/"
+        >
+          <img
+            alt="Pokemon"
+            className="logo"
+            height="300"
+            src="logo.webp"
+            width="1700"
+          />
+        </ForwardRef>
+      </header>
+      <Switch>
+        <Route
+          exact={true}
+          path="/"
+        >
+          <Searchbar />
+          <ForwardRef
+            className="favorites"
+            to="/favorites"
+          >
+            <Heart
+              class="heart"
+            />
+            Favorites
+          </ForwardRef>
+          <main
+            className="main"
+          >
+            <React.Suspense
+              fallback={<React.Fragment />}
+            >
+              <Pokemon
+                identifier={1}
+              />
+            </React.Suspense>
+            <React.Suspense
+              fallback={<React.Fragment />}
+            >
+              <Pokemon
+                identifier={2}
+              />
+            </React.Suspense>
+            <React.Suspense
+              fallback={<React.Fragment />}
+            >
+              <Pokemon
+                identifier={3}
+              />
+            </React.Suspense>
+            <React.Suspense
+              fallback={<React.Fragment />}
+            >
+              <Pokemon
+                identifier={4}
+              />
+            </React.Suspense>
+            <React.Suspense
+              fallback={<React.Fragment />}
+            >
+              <Pokemon
+                identifier={5}
+              />
+            </React.Suspense>
+            <React.Suspense
+              fallback={<React.Fragment />}
+            >
+              <Pokemon
+                identifier={6}
+              />
+            </React.Suspense>
+            <React.Suspense
+              fallback={<React.Fragment />}
+            >
+              <Pokemon
+                identifier={7}
+              />
+            </React.Suspense>
+            <React.Suspense
+              fallback={<React.Fragment />}
+            >
+              <Pokemon
+                identifier={8}
+              />
+            </React.Suspense>
+            <React.Suspense
+              fallback={<React.Fragment />}
+            >
+              <Pokemon
+                identifier={9}
+              />
+            </React.Suspense>
+            <React.Suspense
+              fallback={<React.Fragment />}
+            >
+              <Pokemon
+                identifier={10}
+              />
+            </React.Suspense>
+            <React.Suspense
+              fallback={<React.Fragment />}
+            >
+              <Pokemon
+                identifier={11}
+              />
+            </React.Suspense>
+            <React.Suspense
+              fallback={<React.Fragment />}
+            >
+              <Pokemon
+                identifier={12}
+              />
+            </React.Suspense>
+            <React.Suspense
+              fallback={<React.Fragment />}
+            >
+              <Pokemon
+                identifier={13}
+              />
+            </React.Suspense>
+            <React.Suspense
+              fallback={<React.Fragment />}
+            >
+              <Pokemon
+                identifier={14}
+              />
+            </React.Suspense>
+            <React.Suspense
+              fallback={<React.Fragment />}
+            >
+              <Pokemon
+                identifier={15}
+              />
+            </React.Suspense>
+            <React.Suspense
+              fallback={<React.Fragment />}
+            >
+              <Pokemon
+                identifier={16}
+              />
+            </React.Suspense>
+            <React.Suspense
+              fallback={<React.Fragment />}
+            >
+              <Pokemon
+                identifier={17}
+              />
+            </React.Suspense>
+            <React.Suspense
+              fallback={<React.Fragment />}
+            >
+              <Pokemon
+                identifier={18}
+              />
+            </React.Suspense>
+            <React.Suspense
+              fallback={<React.Fragment />}
+            >
+              <Pokemon
+                identifier={19}
+              />
+            </React.Suspense>
+            <React.Suspense
+              fallback={<React.Fragment />}
+            >
+              <Pokemon
+                identifier={20}
+              />
+            </React.Suspense>
+          </main>
+        </Route>
+        <Route
+          component={[Function]}
+          path="/detail"
+        />
+        <Route
+          component={[Function]}
+          path="/favorites"
+        />
+      </Switch>
+    </BrowserRouter>
+  </div>
+</UNDEFINED>
+`;
