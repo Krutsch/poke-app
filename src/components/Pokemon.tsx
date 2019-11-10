@@ -5,7 +5,7 @@ import PokemonTemplate from "./PokemonTemplate";
 import useFetchPokemon from "./useFetchPokemon";
 
 function Pokemon({ identifier }: { identifier: number | string }) {
-  const { error, pokemon } = useFetchPokemon(identifier);
+  const { error, pokemon } = useFetchPokemon(identifier, null as any);
 
   return (
     <>

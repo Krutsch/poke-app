@@ -5,10 +5,11 @@ import PokemonTemplate from "../components/PokemonTemplate";
 import useFetchPokemon from "../components/useFetchPokemon";
 
 function Detail(props: { location: { state?: any; pathname?: any } }) {
-  const [displayLoad, setDisplayLoad] = useState("");
-  const { error, pokemon } = useFetchPokemon(
-    props.location.pathname.split("/").pop()
+  let { error, pokemon } = useFetchPokemon(
+    props.location.pathname.split("/").pop(),
+    props.location.state
   );
+  const [displayLoad, setDisplayLoad] = useState("");
 
   useEffect(() => {
     const timeout = setTimeout(setDisplayLoad, 100, "Loading your Pokemon ...");

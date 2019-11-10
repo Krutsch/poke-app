@@ -1,11 +1,18 @@
 import { useState, useEffect } from "react";
 import { PokemonJSON } from "../PokemonJSON";
 
-function useFetchPokemon(identifier: string | number) {
+function useFetchPokemon(
+  identifier: string | number,
+  pokemonData: PokemonJSON
+) {
   const [pokemon, setPokemon] = useState<PokemonJSON>(null as any);
   const [error, setError] = useState<boolean>(false);
 
   useEffect(() => {
+    if (pokemonData) {
+      return setPokemon(pokemonData);
+    }
+
     const timeout = setTimeout(async () => {
       try {
         const pokeData = await fetch(
@@ -20,7 +27,7 @@ function useFetchPokemon(identifier: string | number) {
     });
 
     return () => clearTimeout(timeout);
-  }, [identifier, error]);
+  }, [identifier, error, pokemonData]);
 
   return { error, pokemon };
 }
