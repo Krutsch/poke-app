@@ -27,7 +27,7 @@ function PokemonTemplate({ pokemon }: { pokemon: PokemonJSON }) {
           <Heart
             class={
               (window.localStorage.getItem("favorites") || "").includes(
-                pokemon.id.toString()
+                ` ${pokemon.id} `
               ) && "heart"
             }
           />
