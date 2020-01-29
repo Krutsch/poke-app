@@ -56,5 +56,6 @@ function WaitingComponent(Component: React.ElementType) {
     </React.Suspense>
   );
 }
-
+WaitingComponent.whyDidYouRender = true;
+App.whyDidYouRender = true;
 export default App;

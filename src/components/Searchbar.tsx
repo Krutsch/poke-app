@@ -27,5 +27,5 @@ function Searchbar() {
     }
   }
 }
-
+Searchbar.whyDidYouRender = true;
 export default Searchbar;

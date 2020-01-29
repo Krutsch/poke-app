@@ -20,5 +20,5 @@ function Pokemon({ identifier }: { identifier: number | string }) {
     </>
   );
 }
-
+Pokemon.whyDidYouRender = true;
 export default Pokemon;

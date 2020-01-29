@@ -1,4 +1,4 @@
-export function likeFavorite(event: React.SyntheticEvent, id: string) {
+function likeFavorite(event: React.SyntheticEvent, id: string) {
   // Stop Navigate
   event.preventDefault();
 
@@ -13,3 +13,5 @@ export function likeFavorite(event: React.SyntheticEvent, id: string) {
     svg.style.fill = "red";
   }
 }
+likeFavorite.whyDidYouRender = true;
+export default likeFavorite;

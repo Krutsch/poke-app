@@ -1,5 +1,5 @@
 import React from "react";
-import { likeFavorite } from "./FavoriteService";
+import likeFavorite from "./FavoriteService";
 import { PokemonJSON } from "../PokemonJSON";
 import Heart from "./Heart";
 
@@ -46,5 +46,5 @@ function PokemonTemplate({ pokemon }: { pokemon: PokemonJSON }) {
     </>
   );
 }
-
-export default PokemonTemplate;
+PokemonTemplate.whyDidYouRender = true;
+export default React.memo(PokemonTemplate);

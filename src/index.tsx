@@ -1,10 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
-
 import "./styles/index.css";
 import App from "./components/App";
 import * as serviceWorker from "./serviceWorker";
 
+if (process.env.NODE_ENV !== "production") {
+  const whyDidYouRender = require("@welldone-software/why-did-you-render");
+  whyDidYouRender(React);
+}
 // @ts-ignore
 ReactDOM.createRoot(document.getElementById("root")).render(<App />);
 

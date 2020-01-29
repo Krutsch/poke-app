@@ -30,4 +30,5 @@ function Detail(props: { location: { state?: any; pathname?: any } }) {
     </>
   );
 }
+Detail.whyDidYouRender = true;
 export default Detail;

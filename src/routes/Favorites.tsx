@@ -21,5 +21,5 @@ function Favorites() {
     </div>
   );
 }
-
+Favorites.whyDidYouRender = true;
 export default Favorites;

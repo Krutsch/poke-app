@@ -31,4 +31,5 @@ function useFetchPokemon(
 
   return { error, pokemon };
 }
+useFetchPokemon.whyDidYouRender = true;
 export default useFetchPokemon;

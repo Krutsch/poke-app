@@ -25,5 +25,5 @@ const heartStyle = {
 const full = {
   fill: "red"
 };
-
+Heart.whyDidYouRender = true;
 export default Heart;
