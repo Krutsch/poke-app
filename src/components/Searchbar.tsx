@@ -1,9 +1,9 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "../styles/Searchbar.css";
-import { useHistory } from "react-router-dom";
-
+//@ts-ignore
+import { Navigate } from "react-router-dom";
 function Searchbar() {
-  const history = useHistory();
+  const [url, setUrl] = useState<HTMLInputElement>(null as any);
 
   useEffect(() => {
     const elem = document.getElementById("search")!;
@@ -15,15 +15,14 @@ function Searchbar() {
     <label>
       <p>Search for Pokédex number or name</p>
       <input type="text" name="search" placeholder="Pikachu" id="search" />
+      {url && <Navigate to={`/detail/${url.value.toString().trim()}`} />}
     </label>
   );
 
   function downHandler(event: KeyboardEvent) {
     if (event.key === "Enter") {
       event.preventDefault();
-      const url = event.srcElement as HTMLInputElement;
-
-      if (url.value) history.push(`/detail/${url.value.toString().trim()}`);
+      setUrl(event.srcElement as HTMLInputElement);
     }
   }
 }

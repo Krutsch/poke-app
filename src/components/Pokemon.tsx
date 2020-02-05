@@ -10,10 +10,7 @@ function Pokemon({ identifier }: { identifier: number | string }) {
   return (
     <>
       {!error && pokemon && (
-        <Link
-          className="pokemon"
-          to={{ pathname: `/detail/${pokemon.name}`, state: pokemon }}
-        >
+        <Link className="pokemon" to={{ pathname: `/detail/${pokemon.name}`, state: pokemon }}>
           <PokemonTemplate pokemon={pokemon} />
         </Link>
       )}
