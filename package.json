@@ -35,7 +35,7 @@
     "react-dom": "experimental",
     "react-router": "next",
     "react-router-dom": "next",
-    "react-scripts": "3.4.0",
+    "react-scripts": "3.4.1",
     "react-test-renderer": "16.13.0",
     "typescript": "3.8.3"
   }
