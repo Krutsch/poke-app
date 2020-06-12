@@ -28,7 +28,7 @@
     "@types/jest": "26.0.0",
     "@types/node": "13.13.4",
     "@types/react-dom": "16.9.8",
-    "@types/react": "16.9.35",
+    "@types/react": "16.9.36",
     "@types/react-router-dom": "5.1.5",
     "@welldone-software/why-did-you-render": "4.2.5",
     "react": "0.0.0-experimental-d7382b6c4",
