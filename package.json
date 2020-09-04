@@ -31,7 +31,7 @@
     "@types/react": "16.9.43",
     "@types/react-router-dom": "5.1.5",
     "@welldone-software/why-did-you-render": "4.2.6",
-    "react": "0.0.0-experimental-d7382b6c4",
+    "react": "0.14.0",
     "react-dom": "0.0.0-experimental-d7382b6c4",
     "react-router": "next",
     "react-router-dom": "next",
